@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: "version date"
+# 版本控管用說明此Template製作或修改日期
+Description:
+# 說明Template使用目的及使用資源
+Metadata:
+# 提供額外的物件資訊給Template參考
+Parameters:
+# 指定Template的參數，可以看成Template是程式的Function，這個就是輸入(Input)
+# 會有對應的輸出在(Output)
+Mappings:
+# 通常會透過Fn::FindInMap找對應的資源使用
+Conditions:
+# 控制條件，建立資源時，可以參考控制的條件，決定是否建立。例如可以根據Parameter輸入的條件，
+# 像是環境參數如果是dev，則建立比較小的Instance資源
+Transform:
+# 無伺服器架構比較可能會用到的文件
+Resources:
+# 主要的資源描述在這裡，必填！
+Outputs:
+# 輸出，將執行結果輸出，也可以做為console上的輸出或提供其他要創建的stack使用
+
+Parameters:
+  ParameterLogicalID:
+    Type: DataType
+    ParameterProperty: value
+
+
+Resources:
+  Logical ID:
+    Type: Resource type
+    Properties:
+      Set of properties
+
+Outputs:
+  Logical ID:
+    Description: Information about the value
+    Value: Value to return
+    Export:
+      Name: Value to export
